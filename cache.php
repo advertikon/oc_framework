@@ -3,11 +3,7 @@
  * Advertikon Cache Class
  * @author Advertikon
  * @package Advertikon
-<<<<<<< HEAD
- * @version 0.0.7
-=======
  * @version 2.6.4
->>>>>>> afc80f7e39188e63f042e565011d01600f74032a
  */
 
 namespace Advertikon;
@@ -17,10 +13,6 @@ class Cache {
 	protected $dir = null;
 	protected $exp = 3600;
 	protected $fs = null;
-<<<<<<< HEAD
-
-	public function __construct( $expiration = null, $dir = null) {
-=======
 	protected $is_win = false;
 
 	public function __construct( $expiration = null, $dir = null) {
@@ -29,7 +21,6 @@ class Cache {
 			return;
 		}
 
->>>>>>> afc80f7e39188e63f042e565011d01600f74032a
 		$this->fs = new Fs();
 
 		if ( ! is_null( $expiration ) ) {
@@ -78,13 +69,10 @@ class Cache {
 	 * @return void
 	 */
 	public function set( $key, $val, $exp = null ) {
-<<<<<<< HEAD
-=======
 		if ( $this->is_win ) {
 			return;
 		}
 
->>>>>>> afc80f7e39188e63f042e565011d01600f74032a
 		if ( is_null( $exp ) ) {
 			$exp = $this->exp;
 		}
@@ -104,13 +92,10 @@ class Cache {
 	 * @return mixed|null
 	 */
 	public function get( $key ) {
-<<<<<<< HEAD
-=======
 		if ( $this->is_win ) {
 			return null;
 		}
 
->>>>>>> afc80f7e39188e63f042e565011d01600f74032a
 		$cache = glob( $this->dir . $key . '.*' );
 
 		if ( $cache ) {
@@ -130,13 +115,10 @@ class Cache {
 	 * @return void
 	 */
 	public function delete( $key ) {
-<<<<<<< HEAD
-=======
 		if ( $this->is_win ) {
 			return;
 		}
 
->>>>>>> afc80f7e39188e63f042e565011d01600f74032a
 		foreach( glob( $this->dir . $key . '.*' ) as $c ) {
 			@unlink( $c );
 		}
@@ -147,13 +129,10 @@ class Cache {
 	 * @return void
 	 */
 	public function clear() {
-<<<<<<< HEAD
-=======
 		if ( $this->is_win ) {
 			return;
 		}
 
->>>>>>> afc80f7e39188e63f042e565011d01600f74032a
 		$this->fs->iterate_directory( $this->dir, function( $file ) {
 			if ( is_file( $file ) && substr( strstr( $file, '.' ), 1 ) < time() ) {
 				unlink( $file );
@@ -165,11 +144,7 @@ class Cache {
 	 * Adds .htaccess file to restrict access to cache from outside
 	 * @return void
 	 */
-<<<<<<< HEAD
-	public function add_htaccess() {
-=======
 	protected function add_htaccess() {
->>>>>>> afc80f7e39188e63f042e565011d01600f74032a
 		if ( ! is_file( $this->dir . '.htaccess' ) ) {
 			$content = '# Automatically generated .htaccess file by Advertikon Cache class
 			Order Deny,allow
@@ -184,11 +159,8 @@ class Cache {
 		}
 	}
 
-<<<<<<< HEAD
-=======
 	protected function is_win() {
 		return strtoupper( substr( PHP_OS, 0, 3 ) ) === 'WIN';
 	}
 
->>>>>>> afc80f7e39188e63f042e565011d01600f74032a
 }
