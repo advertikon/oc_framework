@@ -1562,7 +1562,7 @@ class Advertikon {
 
 		if ( is_string( $order[ $field ] ) ) {
 			if ( version_compare( VERSION, '2.1.0.1', '>=' ) ) {
-				$ret = $this->json_decode( $order[ $field ] );
+				$ret = $this->json_decode( $order[ $field ] ?: '{}' );
 
 			} else {
 				$ret = unserialize( $order[ $field ] );
@@ -1571,7 +1571,6 @@ class Advertikon {
 		} else {
 			$ret = $order[ $field ];
 		}
-
 
 		return $ret;
 	}
