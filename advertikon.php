@@ -3,7 +3,11 @@
  * Advertikon Class
  * @author Advertikon
  * @package Advertikon
+<<<<<<< HEAD
  * @version 0.0.7
+=======
+ * @version 2.3.8
+>>>>>>> afc80f7e39188e63f042e565011d01600f74032a
  */
 
 namespace Advertikon {
@@ -671,10 +675,17 @@ class Advertikon {
 			$ret = 0;
 
 			if ( 'numeric' === $sort ) {
+<<<<<<< HEAD
 				$ret = $this->sort_num( $a, $b, $name, $order );
 
 			} elseif ( 'alpha' === $sort ) {
 				$ret = $this->sort_alpha( $a, $b, $name, $order );
+=======
+				$ret = $self->sort_num( $a, $b, $name, $order );
+
+			} elseif ( 'alpha' === $sort ) {
+				$ret = $self->sort_alpha( $a, $b, $name, $order );
+>>>>>>> afc80f7e39188e63f042e565011d01600f74032a
 			}
 
 			return $ret;
@@ -689,7 +700,11 @@ class Advertikon {
 	 * @param string $order Sort order
 	 * @return int
 	 */
+<<<<<<< HEAD
 	protected function sort_num( $a, $b, $name, $order = 'asc' ) {
+=======
+	public function sort_num( $a, $b, $name, $order = 'asc' ) {
+>>>>>>> afc80f7e39188e63f042e565011d01600f74032a
 		$res = 0;
 
 		if ( isset( $a['name'] ) && isset( $b['name'] ) ) {

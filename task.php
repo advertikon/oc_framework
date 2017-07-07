@@ -3,7 +3,11 @@
  * Advertikon Task Class
  * @author Advertikon
  * @package Advertikon
+<<<<<<< HEAD
  * @version 0.0.7
+=======
+ * @version 2.6.4
+>>>>>>> afc80f7e39188e63f042e565011d01600f74032a
  * 
  * To install it run self::install() (as a rule you need to do it during the main extension installation)
  * To uninstall run self::uninstall() (as a rule you need to do it during the mail extension installation)
