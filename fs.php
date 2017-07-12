@@ -3,10 +3,8 @@
  * Advertikon File system Class
  * @author Advertikon
  * @package Advertikon
- * @version 2.6.4
- */
-
-namespace Advertikon;
+ * @ve0.0.0       2.6.4
+amespace Advertikon;
 
 class Fs {
 
