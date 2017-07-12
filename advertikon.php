@@ -3,8 +3,10 @@
  * Advertikon Class
  * @author Advertikon
  * @package Advertikon
- * @ve0.0.0       2.3.8
-amespace Advertikon {
+ * @version 2.3.8    
+ */
+
+namespace Advertikon {
 
 class Advertikon {
 

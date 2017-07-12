@@ -3,8 +3,7 @@
  * Advertikon Socket Class
  * @author Advertikon
  * @package Advertikon
- * @ve0.0.0       2.6.4
- @depend Url
+ * @version 2.6.4   
  */
 
 namespace Advertikon;

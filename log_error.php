@@ -3,8 +3,10 @@
  * Advertikon Log Error flag Class
  * @author Advertikon
  * @package Advertikon
- * @ve0.0.0       2.6.4
-amespace Advertikon;
+ * @version 2.6.4   
+ */
+
+namespace Advertikon;
 
 class Log_Error {
 

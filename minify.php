@@ -3,7 +3,8 @@
   * Minify Class
   * @author Advertikon
   * @package Advertikon
-  * @v0.0.0        2.6.4
+  * @version 2.6.4   
+  */
 
 namespace Advertikon;
 
