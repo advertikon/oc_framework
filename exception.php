@@ -1,11 +1,11 @@
 <?php
 /**
-* Advertikon Exception
-*
-* @author Advertikon
-* @package Advertikon
-* @version 2.6.4
-*/
+ * Advertikon Exception
+ *
+ * @author Advertikon
+ * @package Advertikon
+ * @version 2.6.4   
+ */
 
 namespace Advertikon;
 

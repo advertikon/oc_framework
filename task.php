@@ -3,8 +3,8 @@
  * Advertikon Task Class
  * @author Advertikon
  * @package Advertikon
- * @version 2.6.4
- * 
+ * @version 2.6.4  
+ *
  * To install it run self::install() (as a rule you need to do it during the main extension installation)
  * To uninstall run self::uninstall() (as a rule you need to do it during the mail extension installation)
  * Extension need to have Catalog::controller::amend_task action

@@ -4,10 +4,8 @@
 *
 * @author Advertikon
 * @package Stripe
-* @version 2.6.4
-*/
-
-namespace Advertikon\Exception;
+* @ver0.0.0      2.6.4
+mespace Advertikon\Exception;
 
 use Advertikon\Exception as AdvertikonException;
 
