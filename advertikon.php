@@ -318,7 +318,6 @@ class Advertikon {
 	 * @return Mixed
 	 */
 	public function get_value_from_post( $name , $default = '' ) {
-
 		$name = $this->prefix_name( $name );
 		$data = null;
 		$parts = null;

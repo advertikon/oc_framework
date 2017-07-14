@@ -856,12 +856,16 @@ class Renderer {
 	 * @return Boolean
 	 */
 	public function compare_select_value( $value, $select_value ) {
-		foreach( (array)$select_value as $sv ) {
-			if( in_array( gettype( $sv ), array( 'array', 'object', 'resource' ) ) ) {
+		foreach( (array)$select_value as $v ) {
+			if( in_array( gettype( $v ), array( 'array', 'object', 'resource' ) ) ) {
 				continue;
 			}
 
-			if( $value == $sv ) {
+			if ( gettype( $value ) === gettype( $v ) && $value === $v ) {
+				return true;
+
+			// Handles situation when string is being casted to int(0)
+			} elseif ( is_numeric( $value ) && is_numeric( $v ) && $value == $v ) {
 				return true;
 			}
 		}
